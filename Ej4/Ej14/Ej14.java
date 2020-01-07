@@ -6,7 +6,7 @@ package Ej14;
 import java.util.*;
 public class Ej14 {
 
-	//metodo 1
+	//Sacar potencia forma 1
 	static int potenciaDeDos(int n, int[]x) {
 	int rdo=0;
 	if (Math.pow(2,x[0])>n) rdo=1;
@@ -17,7 +17,17 @@ public class Ej14 {
 	return rdo;
 	}
 	
-	//metodo 2
+	//Sacar potencia forma 2
+		static int potenciaDeDos3(int n) {
+			int rdo=0;
+			if (n<=0) rdo=0;
+			else {
+				rdo=1+potenciaDeDos2(n/2);
+			}
+			return rdo;
+			}
+	
+	//Sacar exponente
 	static int potenciaDeDos2(int n) {
 		int rdo=0;
 		if (n<=0) rdo=1;
@@ -26,7 +36,6 @@ public class Ej14 {
 		}
 		return rdo;
 		}
-	
 	
 	public static void main(String[]args) {
 		Scanner sc=new Scanner(System.in);
@@ -37,13 +46,20 @@ public class Ej14 {
 		System.out.println("Dime el parametro");
 		n=sc.nextInt();
 		
+		//Forma 1 de sacar potencia
 		potencia=potenciaDeDos(n,x);
 		System.out.println("La potencia que buscas es "+x[0]);
+		
+		//Forma 2 de sacar potencia
+		//System.out.print("La potencia es: ");
+		//System.out.println(potencia=potenciaDeDos3(n));
+		
 		potencia=potenciaDeDos2(n);
 		System.out.print("El exponente es: ");
 		System.out.println(potencia=potenciaDeDos2(n));
 		
 		System.out.println("2^"+x[0]+"="+potencia+">"+n);
+
 		sc.close();
 	}
 }
