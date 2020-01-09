@@ -2,12 +2,17 @@ package Ej15;
 import java.util.*;
 public class Ej15 {
 
-	public static double interes(int din, int an, double in) {
-		double tot, suma=in*din;
+	public static double interes(int din, int año, double inte) {
+		double total;
 		
-		if(an==0) tot=din;
-		else tot=suma+interes(din,an-1,in);
-		return tot;
+		if (año<1) total=din;
+		else if(año==1) total=din+inte*din;
+		else {
+			total=interes(din,año-1,inte);
+			total=total+total*inte;
+		}
+		
+		return total;
 	}
 	
 	public static void main(String[]args) {
@@ -17,8 +22,6 @@ public class Ej15 {
 		int año=sc.nextInt();
 		double interes=sc.nextDouble();
 		System.out.println("El total es: "+interes(dinero,año,interes));
-
-		
 		
 		sc.close();
 	}
