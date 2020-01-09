@@ -4,7 +4,6 @@ public class Ej15 {
 
 	public static double interes(int din, int año, double inte) {
 		double total;
-		
 		if (año<1) total=din;
 		else if(año==1) total=din+inte*din;
 		else {
@@ -22,6 +21,9 @@ public class Ej15 {
 		int año=sc.nextInt();
 		double interes=sc.nextDouble();
 		System.out.println("El total es: "+interes(dinero,año,interes));
+		
+		//Ejemplo clase
+		//System.out.println("El total es: "+interes(100,4,0.1));
 		
 		sc.close();
 	}
