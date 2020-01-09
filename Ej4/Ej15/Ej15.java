@@ -1,37 +1,24 @@
 package Ej15;
-
 import java.util.*;
-//n!=n*n-1!
 public class Ej15 {
 
-	//Recursivo
-	/**
-	public static long fact(long l) {
-		long rdo;
-		if (l==0) rdo=1;
-		else rdo=l*fact(l-1);
-		return rdo;
-	}**/
-	
-	public static long fact(long l) {
-		long rdo=1;
-		for(int i=1;i<=l;i++) {
-			rdo*=i;
-		}
-		return rdo;
-	}
-	public static long serie(int n) {
-		long rdo;
-		if(n==1) rdo=0;
-		else rdo=n+fact(serie(n-1));
-		return rdo;
+	public static double interes(int din, int an, double in) {
+		double tot, suma=in*din;
+		
+		if(an==0) tot=din;
+		else tot=suma+interes(din,an-1,in);
+		return tot;
 	}
 	
 	public static void main(String[]args) {
 		Scanner sc=new Scanner(System.in);
-		int numero;
-		numero=sc.nextInt();
-		System.out.println(serie(numero));
+		System.out.println("Dime dinero, años e interes separado por espacio");
+		int dinero=sc.nextInt();
+		int año=sc.nextInt();
+		double interes=sc.nextDouble();
+		System.out.println("El total es: "+interes(dinero,año,interes));
+
+		
 		
 		sc.close();
 	}
