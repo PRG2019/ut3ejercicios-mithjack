@@ -2,6 +2,16 @@ package ordenar;
 import java.util.Scanner;
 public class UnirDos {
 
+	//En caso de rellenar vectores por teclado
+	/*public void rellenar(int[]a) {
+		Scanner sc=new Scanner(System.in);
+		for(int f=0;f<a.length;f++) {
+            System.out.print("Ingrese la nota del alumno:");
+            a[f]=sc.nextInt();
+        }
+	}*/
+	
+	
 	public static void notas(int[] a) {
 		for(int k=0;k<a.length;k++) {
             for(int f=0;f<a.length-1-k;f++) {
