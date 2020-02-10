@@ -1,7 +1,7 @@
 /*
  * @mithjack
- *	mejora: añadir el añadido de palabras a una función en vez de el main.
- *	se podria hacer el switch en una función para acortar el main
+ *	mejora: aÃ±adir el aÃ±adido de palabras a una funciÃ³n en vez de el main.
+ *	se podria hacer el switch en una funciÃ³n para acortar el main
  */
 
 package Diccionario;
@@ -9,6 +9,31 @@ package Diccionario;
 import java.util.*;
 public class Diccionario {
 	public static Scanner sc=new Scanner(System.in);
+	
+	public static int crear(int con, Palabras[] palabras) {
+		System.out.println("Dime la palabra inglesa o * para volver al menu");
+		String p1=sc.next();
+		if(p1.equals("*")) return con;
+		
+		else {
+		System.out.println("Dime la palabra espaÃ±ola o * para volver al menu");
+		String p2=sc.next();
+		if(p2.equals("*")) return con;
+		
+		else {
+		System.out.println("Dime la palabra francesa o * para volver al menu");
+		String p3=sc.next();
+		if(p3.equals("*")) return con;
+		
+		else {
+		Palabras aÃ±adir= new Palabras(p1,p2,p3);
+		palabras[con]=aÃ±adir;
+		con++;
+		return con;
+		}
+		}
+		}
+	}
 	
 	public static int buscar(Palabras[] palabras, int conpa, String palabra, int idioma) {
 		int id=-1;
@@ -44,7 +69,7 @@ public class Diccionario {
 		System.out.println("\nQue quieres hacer:");
 		System.out.println("1. Insertar palabras");
 		System.out.println("2. Traducir del Ingles");
-		System.out.println("3. Traducir del Español");
+		System.out.println("3. Traducir del EspaÃ±ol");
 		System.out.println("4. Traducir del Frances");
 		System.out.println("5. Salir ");
 		int men1=sc.nextInt();
@@ -52,28 +77,14 @@ public class Diccionario {
 		switch(men1) {
 		
 		case 1:
-			System.out.println("Dime la palabra inglesa o * para volver al menu");
-			String p1=sc.next();
-			if(p1.equals("*")) break;
-
-			System.out.println("Dime la palabra española o * para volver al menu");
-			String p2=sc.next();
-			if(p2.equals("*")) break;
-			
-			System.out.println("Dime la palabra francesa o * para volver al menu");
-			String p3=sc.next();
-			if(p3.equals("*")) break;
-			
-			Palabras añadir= new Palabras(p1,p2,p3);
-			palabras[conpa]=añadir;
-			conpa++;
+			conpa=crear(conpa,palabras);
 			System.out.println();
 			nopal=true;
 			break;
 
 			
 		case 2:
-			if(!nopal) System.out.println("Primero debes añadir una palabra\n");
+			if(!nopal) System.out.println("Primero debes aÃ±adir una palabra\n");
 			else {
 				System.out.println("Que quieres traducir?");
 				String pre=sc.next();
@@ -87,7 +98,7 @@ public class Diccionario {
 			break;
 			
 		case 3:
-			if(!nopal) System.out.println("Primero debes añadir una palabra\n");
+			if(!nopal) System.out.println("Primero debes aÃ±adir una palabra\n");
 			else {
 				System.out.println("Que quieres traducir?");
 				String pre=sc.next();
@@ -101,7 +112,7 @@ public class Diccionario {
 			break;
 			
 		case 4:
-			if(!nopal) System.out.println("Primero debes añadir una palabra\n");
+			if(!nopal) System.out.println("Primero debes aÃ±adir una palabra\n");
 			else {
 				System.out.println("Que quieres traducir?");
 				String pre=sc.next();
