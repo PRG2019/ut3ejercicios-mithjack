@@ -1,17 +1,18 @@
-package Ej14;
 
+package Ej14;
+/*
+ * @mithjack
+ */
 import java.util.*;
 public class Ej14 {
 	public static Scanner sc=new Scanner(System.in);
 	
 	public static int rellenar(int[]vec, int tot, int pos) {
-		int aux=0;
 		boolean men=false;
 		for(int i=0;i<vec.length;i++) {
-			aux=sc.nextInt();
-			vec[i]=aux;
+			vec[i]=sc.nextInt();
 			if(!men) {
-				if(aux<0) {
+				if(vec[i]<0) {
 					pos=i;
 					men=true;
 				}
@@ -21,7 +22,7 @@ public class Ej14 {
 	}
 	
 	public static void main(String[]args) {
-		int tot=50, posneg=-1;
+		int tot=5, posneg=-1;
 		int vec[]=new int[tot];
 		
 		posneg=rellenar(vec, tot, posneg);
