@@ -4,15 +4,6 @@ import java.util.*;
 public class Ej11_2 {
 	public static Scanner sc=new Scanner (System.in);
 				
-	public static void mostrar(int[][]mat) {
-		for(int i=0;i<mat[0].length;i++){
-            for(int j=0;j<mat.length;j++){
-            	System.out.print(mat[j][i]+" ");	
-            }
-            System.out.println();
-		}
-	}
-	
 	public static void main(String[]args) {
 		System.out.println("Dime N");
 		int num=sc.nextInt();
