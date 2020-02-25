@@ -51,28 +51,21 @@ public class Diccionario {
 
 			case 1:
 				System.out.println("Dime la palabra inglesa o * para volver al menu");
-				String p1 = sc.next();
-				if (p1.equals("*"))
-					break;
+				String p1=sc.next();
+				while(!p1.equals("*")) {
+			
+				System.out.println("Dime la palabra española");
+				String p2=sc.next();
+				System.out.println("Dime la palabra francesa");
+				String p3=sc.next();
+			
 
-				else {
-					System.out.println("Dime la palabra española o * para volver al menu");
-					String p2 = sc.next();
-					if (p2.equals("*"))
-						break;
-
-					else {
-						System.out.println("Dime la palabra francesa o * para volver al menu");
-						String p3 = sc.next();
-						if (p3.equals("*"))
-							break;
-
-						else {
-							Palabras añadir = new Palabras(p1, p2, p3);
-							vocabulario.add(añadir);
-						}
-					}
+				Palabras añadir = new Palabras(p1, p2, p3);
+				vocabulario.add(añadir);
+				System.out.println("Dime la palabra inglesa o * para volver al menu");
+				p1=sc.next();
 				}
+											
 				System.out.println();
 				break;
 
