@@ -26,6 +26,22 @@ public class Palabras {
 	}
 	
 	public String toString() {
-		return "Ingles: "+p1+", Español: "+p2+", Frances: "+p3; 
+		return "Ingles: "+p1+", EspaÃ±ol: "+p2+", Frances: "+p3; 
 	}
+		public String getPalabra(int lang) {
+		String palabra = null;
+		switch(lang) {
+		case 1:
+			palabra=this.p1;
+			break;
+		case 2:
+			palabra=this.p2;
+			break;
+		case 3:
+			palabra=this.p3;
+			break;
+		}
+		return palabra;
+	}
+}
 }
