@@ -26,10 +26,10 @@ public class Diccionario {
 			int men1 = sc.nextInt();
 
 			switch (men1) {
-
+			case 1:
 			boolean sw2=false;
 			while(!sw2) {
-			case 1:
+			
 			System.out.println("Dime la palabra inglesa o * para volver al menu");
 			String p1=sc.next();
 			if(p1.equals("*")) sw2=true;
@@ -47,6 +47,7 @@ public class Diccionario {
 			else {
 				Palabras añadir = new Palabras(p1, p2, p3);
 				vocabulario.add(añadir);
+			}
 			}
 			}
 			}
