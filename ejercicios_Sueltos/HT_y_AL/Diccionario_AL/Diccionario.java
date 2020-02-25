@@ -1,6 +1,6 @@
 /*
  * @mithjack
- *	mejora: cambiar cada opción por una funcion para acortar codigo
+ *	mejora: cambiar cada opciÃ³n por una funcion para acortar codigo
  */
 
 package Diccionario_AL;
@@ -17,7 +17,7 @@ public class Diccionario {
 			System.out.println("\nQue quieres hacer:");
 			System.out.println("1. Insertar palabras");
 			System.out.println("2. Traducir del Ingles");
-			System.out.println("3. Traducir del Español");
+			System.out.println("3. Traducir del EspaÃ±ol");
 			System.out.println("4. Traducir del Frances");
 			System.out.println("5. Eliminar palabra");
 			System.out.println("6. Modificar palabra");
@@ -28,37 +28,34 @@ public class Diccionario {
 			switch (men1) {
 
 			case 1:
-				System.out.println("Dime la palabra inglesa o * para volver al menu");
-				String p1 = sc.next();
-				if (p1.equals("*"))
-					break;
-
-				else {
-					System.out.println("Dime la palabra española o * para volver al menu");
-					String p2 = sc.next();
-					if (p2.equals("*"))
-						break;
-
-					else {
-						System.out.println("Dime la palabra francesa o * para volver al menu");
-						String p3 = sc.next();
-						if (p3.equals("*"))
-							break;
-
-						else {
-							Palabras añadir = new Palabras(p1, p2, p3);
-							vocabulario.add(añadir);
-						}
-					}
-				}
-				System.out.println();
-				break;
+			System.out.println("Dime la palabra inglesa o * para volver al menu");
+			String p1=sc.next();
+			if(p1.equals("*")) sw1=true;
+		
+			else {
+			System.out.println("Dime la palabra espaÃ±ola o * para volver al menu");
+			String p2=sc.next();
+			if(p2.equals("*")) sw1=true;
+		
+			else {
+			System.out.println("Dime la palabra francesa o * para volver al menu");
+			String p3=sc.next();
+			if(p3.equals("*")) sw1=true;
+		
+			else {
+				Palabras aÃ±adir = new Palabras(p1, p2, p3);
+				vocabulario.add(aÃ±adir);
+			}
+			}
+			}
+			System.out.println();
+			break;
 
 			case 2:
 			case 3:
 			case 4:
 				if (vocabulario.size() == 0)
-					System.out.println("Primero debes añadir una palabra\n");
+					System.out.println("Primero debes aÃ±adir una palabra\n");
 				else {
 					System.out.println("Que quieres traducir?");
 					String pre = sc.next();
@@ -96,12 +93,12 @@ public class Diccionario {
 
 			case 5:
 				if (vocabulario.size() == 0)
-					System.out.println("Primero debes añadir una palabra\n");
+					System.out.println("Primero debes aÃ±adir una palabra\n");
 				else {
 					boolean encon = false;
 					System.out.println("De que idioma es la palabra?");
 					System.out.println("1. Ingles");
-					System.out.println("2. Español");
+					System.out.println("2. EspaÃ±ol");
 					System.out.println("3. Frances");
 					int idi = sc.nextInt();
 
@@ -150,7 +147,7 @@ public class Diccionario {
 				boolean encon = false;
 				System.out.println("De que idioma es la palabra?");
 				System.out.println("1. Ingles");
-				System.out.println("2. Español");
+				System.out.println("2. EspaÃ±ol");
 				System.out.println("3. Frances");
 				int idi = sc.nextInt();
 
@@ -161,12 +158,12 @@ public class Diccionario {
 						if (vocabulario.get(i).getPIngles().equals(pre)) {
 							System.out.println("Dime la palabra inglesa");
 							p1 = sc.next();
-							System.out.println("Dime la palabra española");
+							System.out.println("Dime la palabra espaÃ±ola");
 							String p2 = sc.next();
 							System.out.println("Dime la palabra francesa");
 							String p3 = sc.next();
-							Palabras añadir = new Palabras(p1, p2, p3);
-							vocabulario.set(i, añadir);
+							Palabras aÃ±adir = new Palabras(p1, p2, p3);
+							vocabulario.set(i, aÃ±adir);
 							encon = true;
 						}
 					}
@@ -181,12 +178,12 @@ public class Diccionario {
 						if (vocabulario.get(i).getPEsp().equals(pre)) {
 							System.out.println("Dime la palabra inglesa");
 							p1 = sc.next();
-							System.out.println("Dime la palabra española");
+							System.out.println("Dime la palabra espaÃ±ola");
 							String p2 = sc.next();
 							System.out.println("Dime la palabra francesa");
 							String p3 = sc.next();
-							Palabras añadir = new Palabras(p1, p2, p3);
-							vocabulario.set(i, añadir);
+							Palabras aÃ±adir = new Palabras(p1, p2, p3);
+							vocabulario.set(i, aÃ±adir);
 							encon = true;
 						}
 					}
@@ -201,12 +198,12 @@ public class Diccionario {
 						if (vocabulario.get(i).getPFr().equals(pre)) {
 							System.out.println("Dime la palabra inglesa");
 							p1 = sc.next();
-							System.out.println("Dime la palabra española");
+							System.out.println("Dime la palabra espaÃ±ola");
 							String p2 = sc.next();
 							System.out.println("Dime la palabra francesa");
 							String p3 = sc.next();
-							Palabras añadir = new Palabras(p1, p2, p3);
-							vocabulario.set(i, añadir);
+							Palabras aÃ±adir = new Palabras(p1, p2, p3);
+							vocabulario.set(i, aÃ±adir);
 							encon = true;
 						}
 					}
