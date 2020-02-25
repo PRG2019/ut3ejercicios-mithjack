@@ -10,19 +10,19 @@ public static void main(String[]args) {
 	for(int i=0;i<palabra.length();i++) {
 		if(palabra.charAt(i)!=' ') {
 			pal2+=palabra.charAt(i);
+			System.out.println(pal2);
 		}
 		else {
 			if(pal2.length()>lon) {
 				lon=pal2.length();
 				mayo=pal2;
 			}
-		pal2="";
+			pal2="";
 		}
 	}
 	if(pal2.length()>lon) {
 		lon=pal2.length();//longitud de la palabra
 		mayo=pal2;//intercambio mayo por la palabra2
-		pal2="";//reinicio de pal2
 	}
 	System.out.println("La palabra mas larga de '"+palabra+"' es "+mayo+" con "+lon+"");
 }
