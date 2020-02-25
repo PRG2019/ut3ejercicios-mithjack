@@ -75,34 +75,10 @@ public class Diccionario {
 				else {
 					System.out.println("Que quieres traducir?");
 					String pre = sc.next();
-					boolean encon = false;
-					if (men1 == 2) {
-						for (int i = 0; i < vocabulario.size(); i++) {
-							if (vocabulario.get(i).getPIngles().equals(pre)) {
-								System.out.println(vocabulario.get(i));
-								encon = true;
-							}
-						}
-						if (!encon)
-							System.out.println("La palabra no existe");
-					} else if (men1 == 3) {
-						for (int i = 0; i < vocabulario.size(); i++) {
-							if (vocabulario.get(i).getPEsp().equals(pre)) {
-								System.out.println(vocabulario.get(i));
-								encon = true;
-							}
-						}
-						if (!encon)
-							System.out.println("La palabra no existe");
-					} else {
-						for (int i = 0; i < vocabulario.size(); i++) {
-							if (vocabulario.get(i).getPFr().equals(pre)) {
-								System.out.println(vocabulario.get(i));
-								encon = true;
-							}
-						}
-						if (!encon)
-							System.out.println("La palabra no existe");
+					int id=buscar(vocabulario,pre,men1-1);
+					if(id<0)System.out.println("La palabra no existe");
+					else {
+					System.out.println(vocabulario.get(id));
 					}
 				}
 				break;
