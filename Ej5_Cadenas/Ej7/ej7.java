@@ -15,8 +15,8 @@ public static void main(String[]args) {
 			if(pal2.length()>lon) {
 				lon=pal2.length();
 				mayo=pal2;
-				pal2="";
 			}
+		pal2="";
 		}
 	}
 	if(pal2.length()>lon) {
