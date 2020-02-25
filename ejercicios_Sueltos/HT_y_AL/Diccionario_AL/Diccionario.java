@@ -27,20 +27,22 @@ public class Diccionario {
 
 			switch (men1) {
 
+			boolean sw2=false;
+			while(!sw2) {
 			case 1:
 			System.out.println("Dime la palabra inglesa o * para volver al menu");
 			String p1=sc.next();
-			if(p1.equals("*")) sw1=true;
+			if(p1.equals("*")) sw2=true;
 		
 			else {
 			System.out.println("Dime la palabra española o * para volver al menu");
 			String p2=sc.next();
-			if(p2.equals("*")) sw1=true;
+			if(p2.equals("*")) sw2=true;
 		
 			else {
 			System.out.println("Dime la palabra francesa o * para volver al menu");
 			String p3=sc.next();
-			if(p3.equals("*")) sw1=true;
+			if(p3.equals("*")) sw2=true;
 		
 			else {
 				Palabras añadir = new Palabras(p1, p2, p3);
