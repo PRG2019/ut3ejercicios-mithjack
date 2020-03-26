@@ -12,13 +12,13 @@ public class Huevo2 {
 		return Clara;
 	}
 	
-	class Yema{
+	static class Yema{
 		Yema(){
 			System.out.println("Yema");
 		}
 		}
 	
-	class Clara{
+	static class Clara{
 		Clara(){
 			System.out.println("Clara");
 		}
@@ -28,12 +28,12 @@ public class Huevo2 {
 	Huevo2 huevo= new Huevo2();
 	huevo.hacerClara();
 	huevo.hacerYema();
-	
-	//si los hacemos static
+	//si hacemos static los metodos
 	//Huevo2.hacerYema();
 	//Huevo2.hacerClara();
+	
+	//Creandolos directamente desde el main
+	Huevo2.Yema hy=new Huevo2.Yema();
+	Huevo2.Clara hc=new Huevo2.Clara();
 	}
 }
-
-
-
