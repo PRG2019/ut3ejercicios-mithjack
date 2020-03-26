@@ -18,3 +18,12 @@ public class Main {
 		return dato.intValue();
 		}
 }
+
+/*
+*Otra forma seria creando Double dato = new Double(sc.nextDouble()); en el main y llamando con dato la funcion:
+*/
+public static int metodox(Double x){
+		x=x*1.1;
+		return x.intValue();
+		}
+}
