@@ -6,3 +6,5 @@
 9 Ejercicio de la Unidad 5      |
 
 10 Ejercicios Unidad 5.5 Cadenas|
+
+3 Ejercicios Unidad 6 Utilización avanzada de Clases|
