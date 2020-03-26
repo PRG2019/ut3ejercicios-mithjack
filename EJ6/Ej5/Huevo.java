@@ -1,39 +1,28 @@
 package Ej5;
 
-import java.util.Scanner;
 public class Huevo {
-
+	public Huevo() {
+		Huevo.Yema yema= new Huevo.Yema();
+		yema.hacerYema();
+		Huevo.Clara clara= new Huevo.Clara();
+		clara.hacerClara();
+	}
+	
 	class Yema{
-		Yema(){	
+		void hacerYema(){
+			Yema yema=new Yema();
 			System.out.println("yema");
 		}
 	}
 	
 	class Clara{
-		Clara(){
+		void hacerClara(){
+			Clara Clara=new Clara();
 			System.out.println("clara");
 		}
 	}
 	
-	public void hacerYema(){
-		Yema yema=new Yema();
-	}
-	
-	public void hacerClara(){
-		Clara Clara=new Clara();
-	}
-	
-	public void main() {
-		Huevo.this.hacerYema();
-		Huevo.this.hacerClara();
-	}
-
-}
-
-class test{
 	public static void main(String[]args) {
-		Huevo huevo=new Huevo();
-		huevo.main();
+	Huevo huevo= new Huevo();
 	}
 }
-
